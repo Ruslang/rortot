@@ -9,10 +9,11 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
+gem 'slim'
+gem 'slim-rails'
 
 group :production do
   gem 'pg'
-  gem 'slim'
   gem 'unicorn'
   gem 'foreman'
   gem 'rails_12factor'
@@ -26,4 +27,6 @@ group :development, :test do
   gem 'guard-rspec'
   gem 'guard-spork'
   gem 'spork-rails'
+  gem 'capybara'
+  gem 'cucumber'
 end
