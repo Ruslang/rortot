@@ -1,78 +1,38 @@
 require 'spec_helper'
 require 'rails_helper'
-
+require 'utilities.rb'
 describe "Static Pages" do
-  
+
   #let(:base_title) { "RoRToT is underconstruction!" }
 
+  subject { page }
+
   describe "Home page" do
+    before { visit root_path }
 
-    it "should have the right base titile" do
-      visit '/home'
-      expect(page).to have_title("RoRToT is underconstruction!")
-    end
-
-    it "should have a custom page title" do
-      visit '/home'
-      expect(page).to have_title('Home |')
-    end
-  
-    it "should have the content 'Sample Application'" do
-      visit '/home'
-      expect(page).to have_content("Sample Application")
-    end
-  end 
-
-  describe "About page" do
-
-    it "should have the right base titile" do
-      visit '/about'
-      expect(page).to have_title("RoRToT is underconstruction!")
-    end
-  
-    it "should have a custom page title" do
-      visit '/about'
-      expect(page).to have_title('About |')
-    end
-
-    it "should have the content 'Show will'" do
-      visit '/about'
-      expect(page).to have_content("Show will")
-    end
+    it { should have_title(full_title('')) }
+    it { should_not have_title( '| Home') }
+    it { should have_content('RoRToT') }
   end
 
-   describe "FAQ page" do
-  
-    it "should have the right base titile" do
-      visit '/faq'
-      expect(page).to have_title("RoRToT is underconstruction!")
-    end
+  describe "About page" do
+    before { visit about_path }
 
-    it "should have a custom page title" do
-      visit '/faq'
-      expect(page).to have_title('FAQ |')
-    end
-  
-    it "should have the content 'To get something'" do
-      visit '/faq'
-      expect(page).to have_content("To get something") 
-    end
+    it { should have_title(full_title('About Us')) }
+    it { should have_content('Show will') }
+  end
+
+  describe "FAQ page" do
+    before { visit faq_path }
+
+    it { should have_title(full_title('RoRToT is underconstruction!')) }
+    it { should have_content('To get something') }
   end
 
   describe "Contacts page" do
-    it "should have the right base titile" do
-      visit '/contacts'
-      expect(page).to have_title("RoRToT is underconstruction!")
-    end
+    before { visit contacts_path }
 
-    it "should have a custom page title" do
-      visit '/contacts'
-      expect(page).to have_title('Contacts |')
-    end
-  
-    it "should have the content 'For your answers'" do
-      visit '/contacts'
-      expect(page).to have_content("For your answers")
-    end
+    it { should have_titile(full_title('Contacts')) }
+    it { should have_content('For your answers') }
   end
 end

@@ -1,10 +1,13 @@
-header.navbar.navbar-fixed-top.navbar-inverse
+header.navbar.navbar-inverse.navbar-fixed-top
   .navbar-inner
     .container
-      = link_to "RoRToT", id: "logo"
+      = link_to "RoRToT", root_path, id: "logo"
       nav
-        ul.nav.pull-right
-          li.first = link_to "Home", '#'
-          li = link_to "About", '#'
-          li = link_to "FAQ", '#'
-          li = link_to "Contacts", '#'
+      ul.nav.pull-right
+          li.first.active = link_to "Home", root_path
+          li.divider-vertical
+          li = link_to "About", about_path
+          li.divider-vertical
+          li = link_to "FAQ", faq_path
+          li.divider-vertical
+          li = link_to "Contacts", contacts_path

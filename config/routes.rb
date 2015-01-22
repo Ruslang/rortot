@@ -1,13 +1,11 @@
 Rails.application.routes.draw do
-  
-  root 'welcome#index'
-  
-  get 'home', to: 'static_pages#home'
 
-  get 'about', to: 'static_pages#about'
-  
-  get 'faq', to: 'static_pages#faq'
+  root  'static_pages#home'
 
-  get 'contacts', to: 'static_pages#contacts'
+  match '/about', to: 'static_pages#about', via: 'get'
+
+  match '/faq', to: 'static_pages#faq', via: 'get'
+
+  match '/contacts', to: 'static_pages#contacts', via: 'get'
 
 end

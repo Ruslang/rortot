@@ -1,5 +1,6 @@
 require 'rubygems'
 require 'spork'
+
 #uncomment the following line to use spork with the debugger
 #require 'spork/ext/ruby-debug'
 
@@ -92,6 +93,8 @@ RSpec.configure do |config|
   end
 
   config.include Capybara::DSL
+
+  config.include Rails.application.routes.url_helpers
 
 # The settings below are suggested to provide a good initial experience
 # with RSpec, but feel free to customize to your heart's content.
