@@ -34,8 +34,14 @@ group :development, :test do
   gem 'pry'
   gem 'pry-rails'
   gem 'awesome_print'
+  gem 'pry-theme'
   #gem 'byebug'
   #gem 'pry-byebug'
-  gem 'pry-theme'
   #gem 'jazz_hands'
+end
+
+group :assets do
+  gem 'therubyracer'
+  gem 'less-rails'
+  gem 'twitter-bootstrap-rails'
 end
