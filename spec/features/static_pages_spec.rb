@@ -4,8 +4,6 @@ include ApplicationHelper
 
 describe "Static Pages" do
 
-  #let(:base_title) { "RoRToT is underconstruction!" }
-
   subject { page }
 
   describe "Home page" do
