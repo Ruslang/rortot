@@ -13,7 +13,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'slim'
 gem 'slim-rails'
 gem 'httparty'
-
+gem 'bcrypt'
 
 group :production do
   gem 'pg'
