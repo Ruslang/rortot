@@ -75,7 +75,7 @@ describe User do
       adresses = %w[user@zoo.ru EX-US@b.e.org zo.o-b.ee@good.travel xy@bee-n.lo]
       adresses.each do |valid_address|
         @user.email = valid_address
-        expect(@user).to be valid
+        expect(@user).to be_valid
       end
     end
   end
