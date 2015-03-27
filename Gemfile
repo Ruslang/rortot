@@ -36,9 +36,7 @@ group :development, :test do
   gem 'pry-rails'
   gem 'awesome_print'
   gem 'pry-theme'
-  #gem 'byebug'
-  #gem 'pry-byebug'
-  #gem 'jazz_hands'
+  gem 'factory_girl_rails'
 end
 
 group :assets do

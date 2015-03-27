@@ -76,6 +76,11 @@ GEM
     dotenv (1.0.2)
     erubis (2.7.0)
     execjs (2.2.2)
+    factory_girl (4.5.0)
+      activesupport (>= 3.0.0)
+    factory_girl_rails (4.5.0)
+      factory_girl (~> 4.5.0)
+      railties (>= 3.0.0)
     ffi (1.9.6)
     foreman (0.77.0)
       dotenv (~> 1.0.2)
@@ -290,6 +295,7 @@ DEPENDENCIES
   coffee-rails (~> 4.0.0)
   cowsay
   cucumber
+  factory_girl_rails
   foreman
   guard-rspec
   guard-spork
