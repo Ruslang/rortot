@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.1.5'
+ruby '2.2.2'
 
 gem 'rails'
 gem 'sass-rails', '~> 4.0.3'
@@ -14,6 +14,11 @@ gem 'slim'
 gem 'slim-rails'
 gem 'httparty'
 gem 'bcrypt'
+gem 'image_magick'
+gem 'mini_magick'
+gem 'rmagick'
+gem 'carrierwave'
+gem 'whenever'
 
 group :production do
   gem 'pg'
