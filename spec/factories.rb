@@ -1,4 +1,7 @@
-FactoryGirl.define do
+FactoryGirl.define do  factory :project do
+    
+  end
+
   factory :user do
     name "Ruslan Go"
     email "ruslan@ya.ru"
